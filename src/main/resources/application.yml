@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+### 加密
+jasypt:
+  encryptor:
+    # 加密的秘钥
+    password: haha
+    # 加密算法
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+    property:
+      # 算法识别的前后缀，默认ENC()，包含在前后缀的加密信息，会使用指定算法解密
+      prefix: Enc(
+      suffix: )
+
+# QQ机器人配置
+qqbot:
+  base:
+    # 机器人API地址 统一地址 https://api.sgroup.qq.com
+    base-url: https://api.sgroup.qq.com
+    #获取带分片 WSS 接入点API
+    gateway-bot-url: https://api.sgroup.qq.com/gateway/bot
+    #是否启用
+    enabled: true
+    #token 格式 Bot 机器人appId.Token(机器人令牌)
+    bot-token: Bot 1020xxxx.xaOYVZgoxxxxxxxxxxxxxxxxxx
+    #AppID (机器人ID)
+    app-id: 1020xxxx
+    #AppSecret(机器人密钥)
+    app-secret: 4dxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
